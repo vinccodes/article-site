@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <ul>
-        {% if articles %}
-            {% for article in articles %}
-                <li>
-                    <a href="{% url 'articles-detail' article.id %}">
-                        <h1>{{ article.title }}</h1>
-                    </a>
-                    <p>{{ article.created_on }}</p>
-                </li>
-            {% endfor %}
-        {% else %}
-            <p>No articles have been added.</p>
-        {% endif %}
-    </ul>
+    <div class="container main-container">
+        <ul>
+            {% if articles %}
+                {% for article in articles %}
+                    <li>
+                        <a class="article-links" href="{% url 'articles-detail' article.id %}">
+                            <h1>{{ article.title }}</h1>
+                        </a>
+                        <p>{{ article.created_on }}</p>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>No articles have been added.</p>
+            {% endif %}
+        </ul>
+    </div>
+    
 {% endblock content %}

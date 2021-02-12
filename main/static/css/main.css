@@ -1,0 +1,10 @@
+li {
+    list-style: none;
+}
+
+.main-container {
+    margin-top: 50px;
+}
+.article-links {
+    text-decoration: none;
+}
