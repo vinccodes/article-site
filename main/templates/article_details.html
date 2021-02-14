@@ -5,6 +5,6 @@
         <h1>{{ article.title }}</h1>
         <h6>By {{ article.author }}</h6>
         <p>{{ article.content }}</p>
-        <a class="btn btn-warning" href="{% url 'articles-edit' article.id %}">Edit</a>
+        <a class="btn btn-warning" href="{% url 'article-edit' article.id %}">Edit</a>
     </div>
 {% endblock content %}

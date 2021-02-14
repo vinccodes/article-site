@@ -3,7 +3,7 @@
 
 {% block content %}
     <div class="container">
-        <form action="{% url 'articles-edit' article.id %}" method="POST">
+        <form action="{% url 'article-edit' article.id %}" method="POST">
             {% csrf_token %}
             {{ form|crispy }}
             <input type="submit" value="Edit">
